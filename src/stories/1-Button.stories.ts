@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions/dist/preview/action';
-import { linkTo } from '@storybook/addon-links/dist/preview';
+
 
 import Button from '@storybook/angular/dist/demo/button.component';
 export default {
@@ -10,7 +10,7 @@ export default {
 export const Text = () => ({
   component: Button,
   props: {
-    text: 'Hello Button',
+    text: 'Hello dog Button',
   },
 });
 
@@ -38,14 +38,4 @@ WithSomeEmojiAndAction.story = {
   parameters: { notes: 'My notes on a button with emojis' },
 };
 
-export const ButtonWithLinkToAnotherStory = () => ({
-  component: Button,
-  props: {
-    text: 'Go to Welcome Story',
-    onClick: linkTo('Welcome'),
-  },
-});
 
-ButtonWithLinkToAnotherStory.story = {
-  name: 'button with link to another story',
-};
